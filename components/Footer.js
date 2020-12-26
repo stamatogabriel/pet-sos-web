@@ -18,6 +18,10 @@ const Wrapper = styled.div`
   }
 `;
 
+const CustomContainer = styled(Container)`
+  background: #fff;
+`;
+
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -32,7 +36,7 @@ const SocialWrapper = styled.div`
 
 function Footer() {
   return (
-    <Container>
+    <CustomContainer>
       <Wrapper>
         <p>2020 APVA - Associação Protetora da Vida Animal</p>
         <SocialWrapper>
@@ -56,7 +60,7 @@ function Footer() {
           </LogoWrapper>
         </SocialWrapper>
       </Wrapper>
-    </Container>
+    </CustomContainer>
   );
 }
 

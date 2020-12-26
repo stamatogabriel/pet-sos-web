@@ -16,6 +16,7 @@ class MyApp extends App {
       <Head>
         <title>APVA - Associação Protetora da Vida Animal</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
