@@ -1,6 +1,10 @@
 import App from "next/app";
-import Head from 'next/head'
+import Head from "next/head";
 import { ThemeProvider } from "styled-components";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { storeWrapper } from "../store";
 
 import { GlobalStyle } from "../styles/Global";
 import { theme } from "../styles/theme";
@@ -13,12 +17,16 @@ class MyApp extends App {
 
     return (
       <>
-      <Head>
-        <title>APVA - Associação Protetora da Vida Animal</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
+        <Head>
+          <title>APVA - Associação Protetora da Vida Animal</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Head>
         <GlobalStyle />
+        <ToastContainer />
         <ThemeProvider theme={theme}>
           <Header />
           <Component {...pageProps} />
@@ -29,4 +37,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default storeWrapper.withRedux(MyApp);

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { shade } from 'polished'
+import { shade, lighten } from 'polished'
 
 const Button = styled.button`
   padding: 10px;
@@ -16,6 +16,11 @@ const Button = styled.button`
 
   &:hover {
     background-color: ${shade(0.2, '#E01200')};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: ${lighten(0.2, '#E01200')};
   }
 `;
 

@@ -1,16 +1,16 @@
 import React, { useCallback, useRef } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Form } from "@unform/web";
 import * as Yup from "yup";
 import styled from "styled-components";
 
 import { FiMail, FiLock } from "react-icons/fi";
 
-import api from "../services/api";
-
 import Input from "../components/Input";
 import Button from "../components/Button";
 import getValidationErrors from "../utils/getValidationErrors";
+
+import { signInRequest, signFailure } from "../store/modules/auth/actions";
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -66,9 +66,9 @@ const Background = styled.div`
 
 function Login() {
   const formRef = useRef(null);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const user = useSelector(state => state.user)
+  const { loading } = useSelector((state) => state.auth);
 
   const signIn = useCallback(async (data) => {
     try {
@@ -83,16 +83,14 @@ function Login() {
 
       await schema.validate(data, { abortEarly: false });
 
-      const response = await api.post("auth", {
-        email: data.email,
-        password: data.password,
-      });
-
-      console.log(response.data);
-      //  dispatch(userUpdate(response.data))
+      dispatch(signInRequest(data.email, data.password));
     } catch (err) {
-      const errors = getValidationErrors(err);
-      formRef.current?.setErrors(errors);
+      if (err.inner) {
+        const errors = getValidationErrors(err);
+        formRef.current?.setErrors(errors);
+      } else {
+        dispatch(signFailure(err));
+      }
     }
   }, []);
 
@@ -109,7 +107,9 @@ function Login() {
             name="password"
             type="password"
           />
-          <Button onClick={(e) => signIn(e)}>Entrar</Button>
+          <Button onClick={(e) => signIn(e)} disabled={loading}>
+            {loading ? "Carregando" : "Entrar"}
+          </Button>
         </Form>
       </Content>
       <Background />
