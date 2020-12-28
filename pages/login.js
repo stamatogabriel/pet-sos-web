@@ -1,4 +1,6 @@
 import React, { useCallback, useRef } from "react";
+import { useRouter } from 'next/router'
+import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 import { Form } from "@unform/web";
 import * as Yup from "yup";
@@ -67,6 +69,7 @@ const Background = styled.div`
 function Login() {
   const formRef = useRef(null);
   const dispatch = useDispatch();
+  const router = useRouter()
 
   const { loading } = useSelector((state) => state.auth);
 
@@ -84,6 +87,8 @@ function Login() {
       await schema.validate(data, { abortEarly: false });
 
       dispatch(signInRequest(data.email, data.password));
+
+      router.push('/dashboard')
     } catch (err) {
       if (err.inner) {
         const errors = getValidationErrors(err);
@@ -96,6 +101,9 @@ function Login() {
 
   return (
     <Container>
+      <Head>
+        <title>APVA - Página Administrativa</title>
+      </Head>
       <Content>
         <Form onSubmit={signIn} autoComplete="nope" ref={formRef}>
           <img src="/assets/Logo.png" alt="Logo APVA" />

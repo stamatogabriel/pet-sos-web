@@ -4,7 +4,10 @@ import { ThemeProvider } from "styled-components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { storeWrapper } from "../store";
+import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from "react-redux";
+
+import { store, persistor } from "../store";
 
 import { GlobalStyle } from "../styles/Global";
 import { theme } from "../styles/theme";
@@ -28,13 +31,17 @@ class MyApp extends App {
         <GlobalStyle />
         <ToastContainer />
         <ThemeProvider theme={theme}>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
+          <Provider store={store}>
+            <PersistGate persistor={persistor}>
+              <Header />
+              <Component {...pageProps} />
+              <Footer />
+            </PersistGate>
+          </Provider>
         </ThemeProvider>
       </>
     );
   }
 }
 
-export default storeWrapper.withRedux(MyApp);
+export default MyApp;
