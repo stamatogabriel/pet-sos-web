@@ -85,10 +85,10 @@ const Content = styled.div`
 const Background = styled.div`
   flex: 1;
 
-  background-image: url("/assets/contact-image.jpg");
+  background-image: url("/assets/adopt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: initial;
 `;
 
 function Adopt({ pets }) {
