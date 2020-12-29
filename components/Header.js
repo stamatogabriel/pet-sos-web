@@ -42,7 +42,7 @@ function Header() {
             <a>Quem somos</a>
           </Link>
 
-          <Link href="/">
+          <Link href="/adopt">
             <a>Adote um amigo</a>
           </Link>
 

@@ -42,15 +42,12 @@ function Pets() {
   const [openModal, setOpenModal] = useState(false);
   const [openCreate, setOpenCreate] = useState(false);
 
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  };
-
   const getPets = useCallback(async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
       method: "GET",
-      headers,
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     const data = await response.json();

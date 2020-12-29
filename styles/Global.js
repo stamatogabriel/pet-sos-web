@@ -33,5 +33,24 @@ textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
-} 
+}
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 50px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
 `;
