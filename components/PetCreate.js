@@ -65,7 +65,7 @@ function PetCreate({ close }) {
 
       console.log(data);
 
-      const response = await fetch("http://localhost:3000/pets", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         method: "POST",
         headers,
         body: JSON.stringify(data),

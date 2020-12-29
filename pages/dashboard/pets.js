@@ -48,16 +48,18 @@ function Pets() {
   };
 
   const getPets = useCallback(async () => {
-    const response = await fetch("http://localhost:3000/pets", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
       method: "GET",
       headers,
     });
 
     const data = await response.json();
 
-    console.log(data);
-
     return setPets(data);
+  }, []);
+
+  const updatePet = useCallback(async (dataPet) => {
+    setPet(dataPet);
   }, []);
 
   const changeModal = async () => {
@@ -126,7 +128,12 @@ function Pets() {
       </Wrapper>
       {openModal && (
         <Modal close={changeModal.bind()}>
-          <PetDetail pet={pet} close={changeModal.bind()} token={token} />
+          <PetDetail
+            pet={pet}
+            close={changeModal.bind()}
+            token={token}
+            updatePet={updatePet.bind()}
+          />
         </Modal>
       )}
       {openCreate && (

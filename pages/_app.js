@@ -26,6 +26,7 @@ class MyApp extends App {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta charset="UTF-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <GlobalStyle />

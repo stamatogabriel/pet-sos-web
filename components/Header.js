@@ -43,6 +43,10 @@ function Header() {
           </Link>
 
           <Link href="/">
+            <a>Adote um amigo</a>
+          </Link>
+
+          <Link href="/contact">
             <a>Contato</a>
           </Link>
         </LinkWrapper>

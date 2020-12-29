@@ -87,8 +87,6 @@ function Login() {
       await schema.validate(data, { abortEarly: false });
 
       dispatch(signInRequest(data.email, data.password));
-
-      router.push('/dashboard')
     } catch (err) {
       if (err.inner) {
         const errors = getValidationErrors(err);

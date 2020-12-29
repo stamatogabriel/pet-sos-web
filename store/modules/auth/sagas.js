@@ -20,6 +20,8 @@ export function* signIn({ payload }) {
 
     yield put(signInSuccess(accessToken, user));
 
+    window.location.replace(`/dashboard`)
+
   } catch (err) {
     toast.error("Houve um problema com o login, verifique suas credenciais.");
     yield put(signFailure());
