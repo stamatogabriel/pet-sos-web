@@ -26,6 +26,14 @@ class MyApp extends App {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta
+            name="description"
+            content="APVA, Associação Protetora da Vida Animal, ONG, Associação, Caẽs, Gatos, Cachorro, Dog, Cat"
+          />
+          <meta
+            name="keywords"
+            content="APVA - Associação Protetora da Vida Animal - Ajudando os nossos amigos de 4 patas de Paulínia e região"
+          />
           <meta charset="UTF-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>

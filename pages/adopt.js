@@ -74,8 +74,6 @@ const Content = styled.div`
       }
     }
 
-
-
     img {
       margin: 5px;
     }
