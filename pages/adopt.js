@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import styled from "styled-components";
+
+import Button from '../components/Button'
+import Modal from '../components/Modal'
+import PetAdopt from '../components/PetAdopt'
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -42,6 +46,9 @@ const Content = styled.div`
     align-items: flex-start;
 
     div {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
       padding: 0 10px;
       margin-left: 15px;
     }
@@ -56,8 +63,8 @@ const Content = styled.div`
     }
 
     img {
-      height: 130px;
-      width: 130px;
+      height: 155px;
+      width: 155px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -90,10 +97,22 @@ const Background = styled.div`
 `;
 
 function Adopt({ pets }) {
+  const [open, setOpen] = useState(false)
+  const [pet, setPet] = useState()
+
+  const changeOpen = useCallback(() => {
+    setOpen(false)
+  }, [])
+
+  const choosePet = useCallback((data) => {
+    setPet(data)
+    setOpen(true)
+  }, [])
+
   return (
     <Container>
       <Content>
-        <h1>Esses são alguns amigos que precisam de uma lar</h1>
+        <h1>Esses são alguns amigos que precisam de um lar</h1>
         <ul>
           {pets.length &&
             pets.map((pet) => (
@@ -116,10 +135,12 @@ function Adopt({ pets }) {
                     <strong>Observações: </strong>
                     {pet.observations}
                   </p>
+                  <Button colorButton="#336455" onClick={() => choosePet(pet)}>Quero Adotar</Button>
                 </div>
               </li>
             ))}
         </ul>
+        {open && <Modal close={changeOpen.bind()}><PetAdopt pet={pet} close={changeOpen.bind()}/></Modal>}
       </Content>
       <Background />
     </Container>
