@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { FiX } from "react-icons/fi";
 
 import Input from "../components/Input";
+import Select from "../components/Select";
 import Button from "../components/Button";
 import getValidationErrors from "../utils/getValidationErrors";
 
@@ -89,7 +90,14 @@ function PetCreate({ close }) {
         <h2>Cadastro de Pets</h2>
         <Input name="name" placeholder="Nome do Pet" />
         <Input name="age" placeholder="Idade do Pet" />
-        <Input name="type" placeholder="Tipo do Pet" />
+        <Select
+          name="type"
+          placeholder="Tipo do Pet"
+          options={[
+            { label: "Cachorro", value: "cachorro" },
+            { label: "Gato", value: "gato" },
+          ]}
+        />
         <p>Encontrado em</p>
         <Input name="foundIn" placeholder="Encontrado em" type="date" />
         <Input name="observations" placeholder="Observações" />

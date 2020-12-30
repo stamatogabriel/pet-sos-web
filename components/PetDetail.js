@@ -151,7 +151,7 @@ function PetDetail({ pet, token, ...rest }) {
 
   const updatePet = useCallback(async () => {
     try {
-      const response = await fetch(`${process.env.REACT_URL}/pets/${pet._id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets/${pet._id}`, {
         method: "PUT",
         headers,
         body: JSON.stringify({ adopted: true }),
@@ -203,7 +203,7 @@ function PetDetail({ pet, token, ...rest }) {
             </li>
             <li>
               <strong>Encontrado em:</strong>
-              {format(new Date(pet.foundIn), "dd/mm/yyyy")}
+              {format(new Date(pet.foundIn), "dd/MM/yyyy")}
             </li>
             <li>
               <strong>Tipo:</strong>

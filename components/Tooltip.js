@@ -21,7 +21,7 @@ export const Container = styled.div`
     position: absolute;
     bottom: calc(100% + 8px);
     width: 160px;
-    left: 30%;
+    left: 15%;
     transform: translateX(-50%);
     color: #fff;
 
