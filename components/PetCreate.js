@@ -64,8 +64,6 @@ function PetCreate({ close }) {
 
       await schema.validate(data, { abortEarly: false });
 
-      console.log(data);
-
       const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         method: "POST",
         headers,

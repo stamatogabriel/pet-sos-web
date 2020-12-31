@@ -4,3 +4,10 @@ export function updateUser(user) {
     payload: user
   }
 }
+
+export function changeUser(user) {
+  return {
+    type: "@user/UPDATE_USER",
+    payload: user
+  }
+}

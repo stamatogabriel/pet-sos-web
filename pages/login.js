@@ -91,8 +91,6 @@ function Login() {
       if (err.inner) {
         const errors = getValidationErrors(err);
         formRef.current?.setErrors(errors);
-      } else {
-        dispatch(signFailure(err));
       }
     }
   }, []);
