@@ -103,7 +103,7 @@ function Adopt({ pets }) {
   const [open, setOpen] = useState(false)
   const [pet, setPet] = useState()
 
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
 
   useEffect(() => {
