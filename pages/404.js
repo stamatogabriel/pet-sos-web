@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+
+import { updateMenu } from '../store/modules/menu/actions'
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -49,6 +52,12 @@ const Background = styled.div`
 `;
 
 function NotFound() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(updateMenu(false))
+  }, [])
+
   return (
     <Container>
       <Head>

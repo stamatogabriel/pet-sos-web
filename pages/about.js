@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import BannerHero from "../components/BannerHero";
 
 import { useDispatch } from "react-redux";
 import { updateMenu } from "../store/modules/menu/actions";
@@ -13,7 +12,7 @@ function Index() {
 
   return (
     <div>
-      <BannerHero />
+      Sobre nós
     </div>
   );
 }

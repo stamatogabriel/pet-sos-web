@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const Wrapper = styled.div`
   display: flex;
+  margin: 0;
   align-items: center;
   justify-content: space-between;
   width: 100%;

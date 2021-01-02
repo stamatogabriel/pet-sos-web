@@ -1,4 +1,5 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef, useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Head from "next/head";
 import { Form } from "@unform/web";
 import * as Yup from "yup";
@@ -12,6 +13,8 @@ import Textarea from "../components/Textarea";
 import Button from "../components/Button";
 import getValidationErrors from "../utils/getValidationErrors";
 import { phoneMask } from "../utils/masks";
+
+import { updateMenu } from "../store/modules/menu/actions";
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -68,6 +71,7 @@ const Background = styled.div`
 
 function Contact() {
   const formRef = useRef(null);
+  const dispatch = useDispatch();
 
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -111,6 +115,10 @@ function Contact() {
         );
       }
     }
+  }, []);
+
+  useEffect(() => {
+    dispatch(updateMenu(false));
   }, []);
 
   return (

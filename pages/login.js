@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useEffect } from "react";
 import { useRouter } from 'next/router'
 import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,8 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import getValidationErrors from "../utils/getValidationErrors";
 
-import { signInRequest, signFailure } from "../store/modules/auth/actions";
+import { signInRequest } from "../store/modules/auth/actions";
+import { updateMenu } from "../store/modules/menu/actions";
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -94,6 +95,10 @@ function Login() {
       }
     }
   }, []);
+
+  useEffect(() => {
+    dispatch(updateMenu(false))
+  }, [])
 
   return (
     <Container>

@@ -1,9 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import Button from '../components/Button'
 import Modal from '../components/Modal'
 import PetAdopt from '../components/PetAdopt'
+
+import { updateMenu } from '../store/modules/menu/actions'
 
 const Container = styled.div`
   height: calc(100vh - 90px);
@@ -99,6 +102,13 @@ const Background = styled.div`
 function Adopt({ pets }) {
   const [open, setOpen] = useState(false)
   const [pet, setPet] = useState()
+
+  const dispatch = useDispatch
+
+
+  useEffect(() => {
+    dispatch(updateMenu(false))
+  }, [])
 
   const changeOpen = useCallback(() => {
     setOpen(false)

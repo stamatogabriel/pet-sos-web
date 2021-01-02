@@ -52,7 +52,7 @@ textarea:focus, input:focus, select:focus {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #aaa;
   border-radius: 50px;
 }
 /* Handle on hover */
