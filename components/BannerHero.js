@@ -13,7 +13,7 @@ const Container = styled.div`
   justify-content: center;
 
   img {
-    margin-right: -50px;
+   // margin-right: -50px;
     height: 250px;
     -webkit-filter: drop-shadow(5px 5px 5px #fff);
     filter: drop-shadow(5px 5px 5px #fff);
@@ -32,7 +32,7 @@ const Container = styled.div`
 function BannerHero() {
   return (
     <Container>
-      <img src="/assets/Logo.png" alt="Logo APVA" />
+      <img src="/assets/logo-hero.png" alt="Logo APVA" />
     </Container>
   );
 }
