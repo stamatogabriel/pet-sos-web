@@ -143,7 +143,7 @@ function Contact() {
             placeholder="Deixe sua mensagem..."
             rows="7"
           />
-          <Button onClick={(e) => sendMessage(e)} disabled={loading}>
+          <Button onClick={(e) => sendMessage(e)} disabled={loading} colorButton="#336455">
             {loading ? "Enviando" : "Enviar"}
           </Button>
         </Form>

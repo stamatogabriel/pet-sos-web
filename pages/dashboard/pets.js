@@ -52,7 +52,9 @@ function Pets() {
 
     const data = await response.json();
 
-    return setPets(data);
+    console.log(data)
+
+    return setPets(data.pets);
   }, []);
 
   const updatePet = useCallback(async (dataPet) => {

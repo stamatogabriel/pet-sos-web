@@ -111,7 +111,7 @@ function PetAdopt({ close, pet }) {
           value={phoneMask(phone)}
         />
         <Button colorButton="#336455" onClick={sendMessage} disabled={loading}>
-          {loading ? 'Aguarde' : 'Adotar'}
+          {loading ? 'Aguarde' : 'Quero adotar'}
         </Button>
       </Form>
     </Container>

@@ -38,7 +38,7 @@ class MyApp extends App {
             name="og:image"
             content="/assets/Logo.png"
           />
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <GlobalStyle />

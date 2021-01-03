@@ -158,18 +158,21 @@ function Adopt({ pets }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets?adopted=false`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
   });
 
-  const pets = await response.json();
+  const data = await response.json()
+
+  const { pets, totalPages } = data;
 
   return {
     props: {
       pets,
+      totalPages,
     },
   };
 }
