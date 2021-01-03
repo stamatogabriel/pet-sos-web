@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -7,7 +7,7 @@ import { Container } from "../styles/Container";
 
 import { FiMenu, FiX } from "react-icons/fi";
 
-import { updateMenu } from '../store/modules/menu/actions'
+import { updateMenu } from "../store/modules/menu/actions";
 
 const HeaderWrapper = styled.header`
   top: 0;
@@ -69,14 +69,18 @@ const MenuMobile = styled.div`
 `;
 
 function Header() {
-  const menu = useSelector(state => state.menu)
-  const dispatch = useDispatch()
+  const menu = useSelector((state) => state.menu);
+  const dispatch = useDispatch();
 
   return (
     <>
       <HeaderWrapper>
         <Container>
-          <img src="/assets/Logo.png" alt="Logo APVA" height="80" />
+          <Link href="/">
+            <a>
+              <img src="/assets/Logo.png" alt="Logo APVA" height="80" />
+            </a>
+          </Link>
           <LinkWrapper>
             <Link href="/">
               <a>Home</a>

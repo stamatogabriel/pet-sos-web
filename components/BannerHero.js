@@ -13,7 +13,6 @@ const Container = styled.div`
   justify-content: center;
 
   img {
-   // margin-right: -50px;
     height: 250px;
     -webkit-filter: drop-shadow(5px 5px 5px #fff);
     filter: drop-shadow(5px 5px 5px #fff);
