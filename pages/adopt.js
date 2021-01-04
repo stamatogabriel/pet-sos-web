@@ -162,7 +162,7 @@ function Adopt({ pets, page, totalPages }) {
       <Content>
         <h1>Esses são alguns amigos que precisam de um lar</h1>
         <ul>
-          {pets.length &&
+          {pets && pets.length &&
             pets.map((pet) => (
               <li key={pet._id}>
                 <img
