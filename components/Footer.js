@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import Link from "next/link";
 
+import { Container } from "../styles/Container";
+
 const Wrapper = styled.div`
   display: flex;
   margin: 0;
@@ -11,7 +13,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   background: #fff;
-  padding: 1.5rem;
 
   @media (max-width: 600px) {
     display: flex;
@@ -39,25 +40,27 @@ const SocialWrapper = styled.div`
 function Footer() {
   return (
     <Wrapper>
-      <p>2020 APVA - Associação Protetora da Vida Animal</p>
-      <SocialWrapper>
-        <p>Visite nossas redes sociais: </p>
-        <LogoWrapper>
-          <Link href="/">
-            <a>
-              <SiTwitter size={28} />
+      <Container>
+        <p>2020 APVA - Associação Protetora da Vida Animal</p>
+        <SocialWrapper>
+          <p>Visite nossas redes sociais: </p>
+          <LogoWrapper>
+            <Link href="/">
+              <a>
+                <SiTwitter size={28} />
+              </a>
+            </Link>
+            <a href="https://www.facebook.com/apva.paulinia" target="__blank">
+              <SiFacebook size={28} />
             </a>
-          </Link>
-          <a href="https://www.facebook.com/apva.paulinia" target="__blank">
-            <SiFacebook size={28} />
-          </a>
-          <Link href="/">
-            <a>
-              <SiInstagram size={28} />
-            </a>
-          </Link>
-        </LogoWrapper>
-      </SocialWrapper>
+            <Link href="/">
+              <a>
+                <SiInstagram size={28} />
+              </a>
+            </Link>
+          </LogoWrapper>
+        </SocialWrapper>
+      </Container>
     </Wrapper>
   );
 }
