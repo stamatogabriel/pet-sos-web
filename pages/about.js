@@ -21,9 +21,11 @@ const Wrapper = styled.section`
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
+  justify-content: flex-start;
 
   div {
     display: flex;
+    width: 100%;
   }
 
   h1 {
@@ -45,6 +47,18 @@ const Wrapper = styled.section`
     height: 200px;
     border-radius: 10px;
     border: 3px solid #222;
+  }
+
+  @media (max-width: 700px) {
+    div {
+      flex-direction: column;
+    }
+
+    img {
+      height: 150px;
+      width: 250px;
+      margin: 15px auto !important;
+    }
   }
 `;
 
@@ -72,19 +86,27 @@ function Index() {
               Instituições Privadas e Comunidade visando oferecer melhores
               condições de vida aos animais abandonados ou não.
             </p>
-            <img src="/assets/about-city.jpg" style={{marginLeft: '50px'}}/>
+            <img src="/assets/about-city.jpg" style={{ marginLeft: "50px" }} />
           </div>
         </Content>
         <Content>
           <h2>Nossa história</h2>
           <div>
-            <img src="/assets/about-city.jpg" style={{marginRight: '50px'}}/>
-            <p>
-              Defesa do meio ambiente urbano, através da educação, assistência,
-              fiscalização e promoção da ética, em conjunto com o Poder Público,
-              Instituições Privadas e Comunidade visando oferecer melhores
-              condições de vida aos animais abandonados ou não.
-            </p>
+            <img src="/assets/Logo.png" style={{ marginRight: "50px" }} />
+            <div style={{ flexDirection: 'column' }}>
+              <p>
+                Nossos fundadores sempre buscaram trabalhar em prol da defesa
+                animal, mas tinham a ânsia de fazer algo diferente. Algo que
+                realmente ajudasse os animais e o meio ambiente e desse um
+                tratamento e uma lar digno aos animais.
+              </p>
+              <p>
+                Após várias batalhas burocráticas, e com muito esforço, empenho
+                e carinho aos animais nasceu em fevereiro de 2012 a APVA, onde
+                desde a primeira reunião visamos o bem estar animal e defesa do
+                meio ambiente da cidade de Paulínia / SP.
+              </p>
+            </div>
           </div>
         </Content>
       </Wrapper>
