@@ -13,12 +13,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   background: #fff;
-
-  @media (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
 `;
 
 const LogoWrapper = styled.div`
@@ -37,10 +31,18 @@ const SocialWrapper = styled.div`
   flex-direction: column;
 `;
 
+const CustomContainer = styled(Container)`
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
 function Footer() {
   return (
     <Wrapper>
-      <Container>
+      <CustomContainer>
         <p>2020 APVA - Associação Protetora da Vida Animal</p>
         <SocialWrapper>
           <p>Visite nossas redes sociais: </p>
@@ -60,7 +62,7 @@ function Footer() {
             </Link>
           </LogoWrapper>
         </SocialWrapper>
-      </Container>
+      </CustomContainer>
     </Wrapper>
   );
 }

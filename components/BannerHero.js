@@ -18,7 +18,7 @@ const Container = styled.div`
     filter: drop-shadow(5px 5px 5px #fff);
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     img {
       height: calc(100vh - 200px);
       -webkit-filter: drop-shadow(5px 5px 5px #fff);

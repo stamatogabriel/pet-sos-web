@@ -21,7 +21,7 @@ const HeaderWrapper = styled.header`
 
 const LinkWrapper = styled.div`
   display: none;
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,7 @@ const MobileWrapper = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     display: none;
   }
 `;
@@ -63,7 +63,7 @@ const MenuMobile = styled.div`
     font-weight: 700;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     display: none;
   }
 `;
