@@ -1,4 +1,6 @@
 import { takeLatest, call, put, all } from "redux-saga/effects";
+import Router from 'next/router'
+
 import { toast } from "react-toastify";
 
 import { signInSuccess, signFailure } from "./actions";
@@ -20,7 +22,7 @@ export function* signIn({ payload }) {
 
     yield put(signInSuccess(accessToken, user));
 
-    window.location.replace(`/dashboard`)
+    Router.push('/dashboard')
 
   } catch (err) {
     toast.error("Houve um problema com o login, verifique suas credenciais.");
