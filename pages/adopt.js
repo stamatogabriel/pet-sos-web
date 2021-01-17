@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
@@ -68,6 +69,16 @@ const Content = styled.div`
     font-size: 1.7rem;
     text-align: center;
     max-width: 400px;
+  }
+
+  h3 {
+    text-align: center;
+    max-width: 400px;
+    margin: 10rem auto;
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   ul {
@@ -162,7 +173,7 @@ function Adopt({ pets, page, totalPages }) {
       <Content>
         <h1>Esses são alguns amigos que precisam de um lar</h1>
         <ul>
-          {pets && pets.length &&
+          {pets && pets.length ? (
             pets.map((pet) => (
               <li key={pet._id}>
                 <img
@@ -188,7 +199,16 @@ function Adopt({ pets, page, totalPages }) {
                   </Button>
                 </div>
               </li>
-            ))}
+            ))
+          ) : (
+            <h3>
+              Não temos pets disponíveis para adoção.{" "}
+              <Link href="/contact">
+                <a>Fale com a gente</a>
+              </Link>{" "}
+              para mais informações
+            </h3>
+          )}
         </ul>
         <Pagination>
           <button

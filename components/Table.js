@@ -23,7 +23,6 @@ export const Table = styled.table`
 
   tbody {
     tr {
-      cursor: pointer;
       transition: background-color 0.5s;
 
       &:hover {
