@@ -86,14 +86,22 @@ function Index() {
               Instituições Privadas e Comunidade visando oferecer melhores
               condições de vida aos animais abandonados ou não.
             </p>
-            <img src="/assets/about-city.jpg" style={{ marginLeft: "50px" }} />
+            <img
+              src="/assets/about-city.jpg"
+              style={{ marginLeft: "50px" }}
+              alt="Cachorros abandonados na rua"
+            />
           </div>
         </Content>
         <Content>
           <h2>Nossa história</h2>
           <div>
-            <img src="/assets/Logo.png" style={{ marginRight: "50px" }} />
-            <div style={{ flexDirection: 'column' }}>
+            <img
+              src="/assets/Logo.png"
+              style={{ marginRight: "50px" }}
+              alt="Logo APVA"
+            />
+            <div style={{ flexDirection: "column" }}>
               <p>
                 Nossos fundadores sempre buscaram trabalhar em prol da defesa
                 animal, mas tinham a ânsia de fazer algo diferente. Algo que
