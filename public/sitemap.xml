@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      
+	<url>
+		<loc>https://apva-web.vercel.app/404</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/about</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/adopt</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/api/hello</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/contact</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/admins</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/index</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/items</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/people</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/pets</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/dashboard/user</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/index</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+
+	<url>
+		<loc>https://apva-web.vercel.app/login</loc>
+		<lastmod>2021-01-16</lastmod>
+	</url>
+</urlset>
