@@ -46,7 +46,7 @@ class MyApp extends App {
           <meta name="og:image" content="/assets/Logo.png" />
           <meta charSet="UTF-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
+          <link rel="stylesheet" type="text/css" href="/styles/nprogress.css" />
         </Head>
         <GlobalStyle />
         <ToastContainer />
