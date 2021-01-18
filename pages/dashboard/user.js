@@ -138,7 +138,6 @@ function UpdateUser() {
 
       return toast.success("Senha atualizada com sucesso");
     } catch (err) {
-      console.log(err);
       if (err.inner) {
         const errors = getValidationErrors(err);
         passRef.current?.setErrors(errors);

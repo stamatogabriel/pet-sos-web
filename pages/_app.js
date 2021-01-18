@@ -1,6 +1,6 @@
 import App from "next/app";
 import Head from "next/head";
-import Router from 'next/router'
+import Router from "next/router";
 import { ThemeProvider } from "styled-components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,7 +18,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 Router.events.on("routeChangeStart", (url) => {
-  console.log(`Loading: ${url}`);
   NProgress.start();
 });
 Router.events.on("routeChangeComplete", () => NProgress.done());
